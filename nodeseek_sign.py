@@ -63,5 +63,5 @@ if COOKIE_ENV:
         print("发生异常:", e)
         print("实际响应内容:", response.text)
 else:
-    send("Cookie失效", "请先设置Cookie")
+    send("nodeseek签到", "Cookie失效，请先设置Cookie。")
     print("请先设置Cookie")
