@@ -54,14 +54,14 @@ if COOKIE_ENV:
         print(COOKIE_ENV)
         message = response_data.get('message')
         success = response_data.get('success')
+        send("nodeseek签到", message)
         if success == "true":
             print(message)
-            send("nodeseek签到成功", message)
         else:
             print(message)
-            send("nodeseek签到失败", message)
     except Exception as e:
         print("发生异常:", e)
         print("实际响应内容:", response.text)
 else:
+    send("Cookie失效", "请先设置Cookie")
     print("请先设置Cookie")
